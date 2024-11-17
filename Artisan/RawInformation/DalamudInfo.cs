@@ -31,14 +31,14 @@ namespace Artisan.RawInformation
                         if (type is not null && !string.IsNullOrEmpty(type) && type != "release")
                         {
                             StagingChecked = true;
-                            IsStaging = true;
-                            return true;
+                            IsStaging = false;
+                            return false;
                         }
                         else
                         {
                             StagingChecked = true;
-                            IsStaging = false;
-                            return false;
+                            IsStaging = true;
+                            return true;
                         }
                     }
                     catch (Exception ex)
